@@ -6,8 +6,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
 // const userRouter = require('./routers/auth.route');
-
-const mongoUrl = 'mongodb+srv://Sai:12345@cluster0.9zgbmbg.mongodb.net/?appName=Cluster0' 
+const mongoUrl = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(morgan('dev'));
